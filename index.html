@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DBL GROUP — L’AUTOMOBILE SANS LIMITES</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="brand">DBL <span>GROUP</span><small>L’AUTOMOBILE SANS LIMITES</small></div>
+<nav><a href="#home">Accueil</a><a href="#vehicles">Véhicules</a><a href="#rental">Location</a><a href="#import">Importation</a><a href="#sell">Vendre</a><a href="#partner">Partner</a></nav>
+<button class="menu" onclick="toggleMenu()">☰</button></header>
+
+<main>
+<section id="home" class="hero">
+<div><p class="eyebrow">DBL GROUP • COTONOU</p><h1>Votre prochain véhicule commence ici.</h1>
+<p class="lead">Location, achat, vente et importation de véhicules. Une plateforme pensée pour simplifier chaque étape.</p>
+<div class="actions"><button onclick="go('vehicles')">Acheter / Trouver un véhicule</button><button class="ghost" onclick="go('rental')">Louer un véhicule</button></div></div>
+<div class="hero-card"><div class="tag">À LA UNE</div><h3>Changan UNI-K AWD 2026</h3><p>Disponible immédiatement • Cotonou</p><strong>18 800 000 FCFA TTC</strong><button onclick="showVehicle('UNI-K AWD 2026')">Voir le véhicule</button></div>
+</section>
+
+<section class="stats"><div><b>4</b><span>services principaux</span></div><div><b>HT / TTC</b><span>prix transparents</span></div><div><b>China → Afrique</b><span>importation</span></div><div><b>DBL Partner</b><span>opportunités & commissions</span></div></section>
+
+<section id="vehicles" class="section"><div class="section-head"><div><p class="eyebrow">CATALOGUE</p><h2>Véhicules disponibles</h2></div><input id="search" oninput="filterVehicles()" placeholder="Rechercher une marque, modèle..."></div>
+<div id="vehicleGrid" class="grid"></div></section>
+
+<section id="rental" class="section dark"><p class="eyebrow">LOCATION</p><h2>Louez selon votre besoin</h2><div class="formgrid">
+<label>Date de départ<input type="datetime-local" id="rd"></label><label>Date de retour<input type="datetime-local" id="rr"></label>
+<label>Catégorie<select id="rc"><option>Toutes</option><option>SUV</option><option>Berline</option><option>4x4</option></select></label>
+<label>Conducteur<select><option>Sans chauffeur</option><option>Avec chauffeur</option></select></label>
+</div><button onclick="quoteRental()">Calculer ma demande</button><p id="rentalResult" class="result"></p></section>
+
+<section id="import" class="section"><p class="eyebrow">IMPORTATION</p><h2>Un véhicule depuis la Chine, avec une estimation claire.</h2><div class="importbox">
+<label>Modèle<select id="imodel" onchange="calcImport()"><option value="9800000">GAC GS3 2026</option><option value="12500000">Changan UNI-Z 2026</option><option value="15800000">Changan UNI-K AWD 2026</option></select></label>
+<label>Port de réception<select id="port" onchange="calcImport()"><option value="0">Cotonou</option><option value="250000">Lomé</option><option value="450000">Tema</option><option value="600000">Lagos</option></select></label>
+<div class="estimate"><span>Prix véhicule</span><b id="iprice"></b><span>Transport / frais estimatifs</span><b id="iship"></b><span>Estimation TTC</span><strong id="itotal"></strong></div>
+</div><p class="note">Les taxes, droits et frais définitifs dépendent du véhicule, du port et du dossier. Les montants affichés ici sont une démonstration.</p></section>
+
+<section id="sell" class="section dark"><p class="eyebrow">MARKETPLACE</p><h2>Vendez votre véhicule avec DBL.</h2><p class="lead">Soumettez votre véhicule. Notre équipe peut vérifier les informations, demander une inspection et valider l’annonce avant publication.</p>
+<div class="formgrid"><input placeholder="Nom complet"><input placeholder="Téléphone / WhatsApp"><input placeholder="Marque & modèle"><input placeholder="Année"><input placeholder="Kilométrage"><input placeholder="Prix demandé (FCFA)"></div>
+<button onclick="submitSell()">Soumettre mon véhicule</button><p id="sellResult" class="result"></p></section>
+
+<section id="partner" class="section"><p class="eyebrow">DBL PARTNER</p><h2>Transformez vos contacts en opportunités.</h2><div class="cards">
+<article><b>Votre lien personnel</b><p>Partagez les véhicules et suivez les prospects issus de vos recommandations.</p><code>dblgroup.bj/?ref=DBL123</code></article>
+<article><b>Commissions</b><p>Les commissions sont validées après une transaction réelle et selon les règles DBL.</p><strong>Jusqu’à 5 000 FCFA / jour</strong></article>
+<article><b>Points & récompenses</b><p>Gagnez des points grâce aux activités éligibles, formations et transactions.</p><strong>Starter → Partner → Pro → Elite</strong></article>
+</div>
+<div class="best"><span>🏆 BEST PARTNER</span><b>Mis à l’honneur chaque jour, semaine, mois et année</b><small>Pas de classement public permanent.</small></div></section>
+
+<section class="section dark"><p class="eyebrow">COMMUNAUTÉ</p><h2>Un espace privé pour les partenaires.</h2><div class="cards"><article>💬 Publications, commentaires, likes, sondages et partages.</article><article>🎬 Coulisses : arrivages, chargements, Chine, nouveaux modèles.</article><article>🎓 Formations : vente, négociation, WhatsApp, TikTok, closing.</article></div></section>
+
+<section id="admin" class="section"><p class="eyebrow">BACK-OFFICE</p><h2>Centre de contrôle DBL</h2><div class="admin-grid"><div><b>Véhicules</b><span>Ajouter • modifier • publier • louer • vendre</span></div><div><b>Annonces</b><span>À vérifier • approuver • demander des infos</span></div><div><b>Partenaires</b><span>Commissions • points • récompenses</span></div><div><b>Transactions</b><span>Locations • ventes • importations • paiements</span></div></div></section>
+</main>
+<footer>© DBL GROUP — L’AUTOMOBILE SANS LIMITES • Version prototype complète</footer>
+<script src="assets/app.js"></script>
+</body></html>
