@@ -89,3 +89,25 @@
 #admin article p {
   color: #475569 !important;
 }
+/* BACK-OFFICE : CARTES LISIBLES */
+#admin .admin-grid > div {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #dbe2ea !important;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+#admin .admin-grid > div b {
+  display: block;
+  color: #111827 !important;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#admin .admin-grid > div span {
+  display: block;
+  color: #475569 !important;
+  font-size: 16px;
+  line-height: 1.5;
+}
