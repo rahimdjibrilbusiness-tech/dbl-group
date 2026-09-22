@@ -33,3 +33,44 @@
     color:#64748b;
   }
 }
+/* CORRECTIONS MOBILE DBL GROUP */
+@media (max-width: 768px) {
+
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: visible;
+  }
+
+  .top nav {
+    display: none;
+  }
+
+  .top .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  #admin {
+    color: #111827;
+  }
+
+  #admin article {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #dbe2ea;
+  }
+
+  #admin article b,
+  #admin article strong {
+    color: #111827;
+  }
+
+  #admin article p {
+    color: #64748b;
+  }
+}
