@@ -1,3 +1,7 @@
+const supabaseClient = window.supabase.createClient(
+  "https://zzcmzbhkgkjtcjtjsnyk.supabase.co",
+  "sb_publishable_BO0nXC8mm4-y-Z1BhyAknQ_Sdjy_pS3",
+);
 const vehicles=[
 {name:"Changan UNI-K AWD 2026",type:"SUV",price:18800000,ht:15800000,status:"Disponible immédiatement"},
 {name:"GAC GS3 2026",type:"SUV",price:9500000,ht:8200000,status:"Disponible"},
