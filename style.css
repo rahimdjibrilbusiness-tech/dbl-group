@@ -74,3 +74,18 @@
     color: #64748b;
   }
 }
+/* BACK-OFFICE : TEXTE BIEN LISIBLE */
+#admin article {
+  background: #ffffff !important;
+  color: #111827 !important;
+}
+
+#admin article b,
+#admin article strong,
+#admin article h3 {
+  color: #111827 !important;
+}
+
+#admin article p {
+  color: #475569 !important;
+}
